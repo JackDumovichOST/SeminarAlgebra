@@ -12,4 +12,5 @@ chapter0 =								\
 	../slides/0/nextsteps.tex					\
 	../slides/0/vortraege.tex					\
 	../slides/0/semesterplan.tex					\
+	../slides/0/aufgaben.tex					\
 	../slides/0/inhalt.tex
