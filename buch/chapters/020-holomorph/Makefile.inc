@@ -5,6 +5,9 @@
 #
 
 CHAPTERFILES += 							\
+	chapters/020-holomorph/uebungsaufgaben/201.tex			\
+	chapters/020-holomorph/uebungsaufgaben/202.tex			\
+	chapters/020-holomorph/uebungsaufgaben/203.tex			\
 	chapters/020-holomorph/1-holomorph.tex				\
 	chapters/020-holomorph/2-funktionen.tex				\
 	chapters/020-holomorph/3-nichtholomorph.tex			\
