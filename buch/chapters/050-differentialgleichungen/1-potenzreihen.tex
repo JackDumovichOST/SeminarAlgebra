@@ -229,7 +229,7 @@ a_{2n}   &= (-1)^n \omega^{2n} \frac{1}{(2n)!}   a_0
 a_{2n+1} &= (-1)^n \omega^{2n} \frac{1}{(2n+1)!} a_1.
 \end{align*}
 Daraus kann die Lösung als
-\begin{align*}
+\begin{align}
 y(x)
 &=
 a_0
@@ -239,6 +239,7 @@ a_0
 a_1
 \sum_{n=0}^\infty
 (-1)^n\omega^{2n}\frac{1}{(2n+1)!} x^{2n+1}
+\notag
 \\
 &=
 a_0
@@ -248,15 +249,27 @@ a_0
 \frac{a_1}{\omega}
 \sum_{n=0}^\infty
 \frac{(-1)^n}{(2n+1)!} (\omega x)^{2n+1}
+\notag
 \\
 &=
 a_0\cos(\omega x)
 +
 \frac{a_1}{\omega}\sin(\omega x)
-\end{align*}
+\label{buch:differentialgleichungen:potenzreihen:eqn:schwloesung}
+\end{align}
 ableiten.
 Die Lösungen sind also Linearkombinationen von Sinus-
 bzw.~Kosinus-Schwin\-gun\-gen.
 
-
-
+Auch in diesem Fall ist die zweite Ableitung der Lösung
+\eqref{buch:differentialgleichungen:potenzreihen:eqn:schwloesung}
+\[
+y''(x)
+=
+-\omega^2 a_0\cos(\omega x)
+-
+\omega^2 \frac{a_1}{\omega} \sin(\omega x)
+=
+-\omega^2 y(x),
+\]
+und erfüllt damit wie erwartet die Schwingungsdifferentialgleichung.
