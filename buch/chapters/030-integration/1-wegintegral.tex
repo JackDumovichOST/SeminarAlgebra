@@ -1075,6 +1075,7 @@ Für eine holomorphe Funktion $f$ gilt
 % Der Satz von Green
 %
 \subsubsection{Der Satz von Green}
+\input{chapters/030-integration/fig/fig-green.tex}%
 Die Aussage von
 Satz~\ref{buch:integration:wegintegral:satz:rechteckintegrale}
 ist ein Spezialfall des sehr viel allgemeineren Satzes von Green.
@@ -1096,22 +1097,81 @@ g(x(t),y(t))\,\dot{y}(t)
 \,dt
 =
 \int_G 
-\frac{\partial f}{\partial y}
--
 \frac{\partial g}{\partial x}
+-
+\frac{\partial f}{\partial y}
 \,dx\,dy
 \]
 \end{satz}
 
 \begin{proof}
 Wir beweisen die Aussage des Satzes unter der vereinfachenden Annahme,
-dass der Rand des Gebietes $G$ durch Funktion $\varphi_k(x)$ und
-$\psi_k(x)$, $k=0,1$, wie in
+dass der Rand des Gebietes $G$ durch Funktion $\varphi_{\pm}(x)$ und
+$\psi_{\pm}(x)$ wie in
 Abbildung~\ref{buch:integration:wegintegral:fig:green}
 gezeigt, beschrieben werden kann.
 
+Die Differenz der Funktionswerte von $f$ an den Stellen
+$(x,\varphi_+(x))$ und $(x,\varphi_-(x))$ kann als Integral der
+partiellen Ableitung nach $y$ entlang der grünen Linie
+\begin{align*}
+f(x,\varphi_+(x)) - f(x,\varphi_-(x))
+&=
+\int_{\varphi_-(x)}^{\varphi_+(x)} f(x,y)\,dy
+\intertext{berechnet werden.
+Analog kann man die Differenz}
+g(\psi_+(y),y) - g(\psi_-(y),y)
+&=
+\int_{\psi_-(y)}^{\psi_+(y)} f(x,y)\,dx
+\end{align*}
+schreiben.
 
-TODO
+Das Wegintegral entlang des Randes ist die Differenz der Integrale
+entlang der verschiedenfarbigen Teile des Randes.
+Die richtige Orientierung verwendet die Vorzeichen wie folgt:
+\begin{equation*}
+\renewcommand{\arraycolsep}{2pt}
+\begin{array}{rclcl}
+\displaystyle
+\int_\gamma f\,dx
+&=&
+\displaystyle
+-
+\int_{x_-}^{x_+}
+f(x,\varphi_+(x))
+-
+f(x,\varphi_-(x))
+\,dx
+&=&
+\displaystyle
+-
+\int_{x_0}^{x_1}
+\int_{\varphi_-(x)}^{\varphi_+(x)}
+\frac{\partial f}{\partial y}(x,y)
+\,dy
+\,dx
+\\[10pt]
+\displaystyle
+\int_\gamma g\,dy
+&=&
+\displaystyle
+\phantom{-}
+\int_{y_-}^{y_+}
+g(\psi_+(y),y)
+-
+g(\psi_-(y),y)
+\,dy
+&=&
+\displaystyle
+\phantom{-}
+\int_{y_-}^{y_+}
+\int_{\psi_-(y)}^{\psi_+(y)}
+\frac{\partial g}{\partial x}(x,y)
+\,dx
+\,dy.
+\end{array}
+\end{equation*}
+Die Summe der beiden Gleichungen ergibt die Aussage des Satzes.
 \end{proof}
 
 
@@ -1120,9 +1180,7 @@ TODO
 %
 \subsubsection{Wegintegral und Stammfunktion}
 Der Satz~\ref{buch:integration:wegintegral:satz:green}
-und insbesondere das
-Korollar~\ref{buch:integration:wegintegral:korollar:geschlossen}
-zeigen, dass es nicht darauf ankommt, welchen Weg man zwischen
+zeigt, dass es nicht darauf ankommt, welchen Weg man zwischen
 zwei Punkten $a$ und $b$ wählt, solange zwei solche Wege ein
 Teilgebiet des Definitionsgebietes beranden.
 In diesem Fall lässt sich also durch Wegintegration immer eine
