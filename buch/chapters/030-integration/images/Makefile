@@ -3,7 +3,7 @@
 #
 # (c) 2026 Prof Dr Andreas Müller
 #
-all:	wege.pdf rechteck.pdf residuum.pdf argument.pdf lochgebiet.pdf homotopie.pdf dreiecke.pdf beliebig.pdf green.pdf
+all:	wege.pdf rechteck.pdf residuum.pdf argument.pdf lochgebiet.pdf homotopie.pdf dreiecke.pdf beliebig.pdf green.pdf deformation.pdf
 
 wege.pdf:	wege.tex
 	pdflatex wege.tex
@@ -31,4 +31,7 @@ beliebig.pdf:	beliebig.tex
 
 green.pdf:	green.tex
 	pdflatex green.tex
+
+deformation.pdf:	deformation.tex
+	pdflatex deformation.tex
 
